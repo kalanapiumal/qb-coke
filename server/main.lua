@@ -88,8 +88,7 @@ AddEventHandler('qb-coke:server:cokesell', function()
 
                         Player.Functions.RemoveItem("cokebaggy", Player.PlayerData.items[k].amount)
                         TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items['cokebaggy'], "remove")
-                        Player.Functions.AddItem("cash", amount)
-                        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items['cash'], "add")
+                        Player.Functions.AddMoney("cash", amount)
                         break
                     else
                         TriggerClientEvent('QBCore:Notify', src, "You do not have coke", 'error')
